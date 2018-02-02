@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using GameTest.Model;
 using GameTest.Model.MapNLocations;
 
-namespace GameTest {
+namespace GameTest.ViewModelNS {
     public class ViewModel {
-        public ViewModel() {
-
-        }
         private Player _player;
         private Monster _monster;
         private MapForWorldOne _mapForWorldOne;
         private string _mapBindingStart;
+        public ViewModel() {
+            CurrentPlayer();
+        }
 
         public string MapBindingStart { get { return _mapBindingStart; } set { _mapBindingStart = value; } }
         public Player CurrentPlayer() {

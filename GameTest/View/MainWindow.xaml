@@ -1,12 +1,14 @@
-﻿<Window x:Class="GameTest.MainWindow"
+﻿<Window x:Class="GameTest.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GameTest"
+        xmlns:local="clr-namespace:GameTest.ViewModelNS"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label x:Name="Lbl_HitPointsText" Content="Hit Points:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <Label x:Name="lbl_HitPointsHealth" Content="{Binding CurrentPlayer.CurrentHitPoints, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,10,0,0"/>
+
     </Grid>
 </Window>
