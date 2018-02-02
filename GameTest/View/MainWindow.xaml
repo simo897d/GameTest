@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameTest.ViewModelNS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <Label x:Name="Lbl_HitPointsText" Content="Hit Points:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
         <Label x:Name="lbl_HitPointsHealth" Content="{Binding CurrentPlayer.CurrentHitPoints, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,10,0,0"/>
+
+        <DataGrid x:Name="dgv_Inventory" ItemsSource="{Binding CurrentPlayer.ListOfInventory}" HorizontalAlignment="Left" Height="332" VerticalAlignment="Top" Width="152" Margin="630,10,0,0"/>
 
     </Grid>
 </Window>

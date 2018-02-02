@@ -5,16 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using GameTest.Model.Items;
+using System.Collections.ObjectModel;
 
 namespace GameTest.Model {
     public class Player : LivingCreatures {
 
         private Weapons _weapon;
         public Weapons CurrentWeapon { get { return _weapon; } set { _weapon = value; } }
-        public BindingList<InventoryItem> ListOfInventory { get; set; }
+        public ObservableCollection<InventoryItem> ListOfInventory { get; set; }
         
         public Player(int currentHitPoints, int maxHitPoints, string creatureName, Weapons equippedWep) : base(currentHitPoints, maxHitPoints, creatureName) {
-            ListOfInventory = new BindingList<InventoryItem>();
+            ListOfInventory = new ObservableCollection<InventoryItem>();
             CurrentWeapon = equippedWep;
             }
 
