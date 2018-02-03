@@ -31,7 +31,7 @@ namespace GameTest.ViewModelNS {
             }
         }
         public GenericMap CurrentZone() {
-            if(CurrentZoneProp == null) {
+            if (CurrentZoneProp == null) {
                 StartingZone();
             } else { return CurrentZoneProp; }
             return CurrentZoneProp;
@@ -39,8 +39,8 @@ namespace GameTest.ViewModelNS {
         public string MapBindingStart { get { return _mapBindingStart; } set { _mapBindingStart = value; } }
         public MapForWorldOne StartingZone() {
             _mapForWorldOne = MapForWorldOne.StartingZone();
-            MapForWorldOne.BindingMapString();
-            MapBindingStart = MapForWorldOne.BindingMapString();
+            MapForWorldOne.BindingMapString(9, 9);
+            MapBindingStart = MapForWorldOne.BindingMapString(9, 9);
             return _mapForWorldOne;
         }
         public ObservableCollection<InventoryItem> ListOfIventory {
@@ -64,7 +64,6 @@ namespace GameTest.ViewModelNS {
             return output;
         }
         public void MovePlayer() {
-
         }
 
 

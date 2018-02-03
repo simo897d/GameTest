@@ -12,7 +12,7 @@
 
         <DataGrid x:Name="dgv_Inventory" ItemsSource="{Binding CurrentPlayer.ListOfInventory}" HorizontalAlignment="Left" Height="332" VerticalAlignment="Top" Width="152" Margin="630,10,0,0" IsReadOnly="True"/>
         <TextBox x:Name="tb_Map" HorizontalAlignment="Left" Height="182" TextWrapping="Wrap" Text="{Binding MapBindingStart, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="270" Margin="202,138,0,0" IsReadOnly="True"/>
-        <Button x:Name="btn_MoveNorth" Content="North" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="294,95,0,0"/>
+        <Button x:Name="btn_MoveNorth" Content="North" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="294,95,0,0" Click="btn_MoveNorth_Click"/>
         <Button x:Name="btn_MoveWest" Content="West" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="99,219,0,0"/>
         <Button x:Name="btn_MoveSouth" Content="South" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="294,354,0,0"/>
         <Button x:Name="btn_MoveEast" Content="East" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="515,225,0,0"/>

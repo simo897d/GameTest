@@ -19,10 +19,13 @@ namespace GameTest.View {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+            ViewModel vm = new ViewModel();
         public MainWindow() {
             InitializeComponent();
-            ViewModel vm = new ViewModel();
             DataContext = vm;
+        }
+
+        private void btn_MoveNorth_Click(object sender, RoutedEventArgs e) {
         }
     }
 }

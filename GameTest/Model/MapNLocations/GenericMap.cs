@@ -9,18 +9,21 @@ namespace GameTest.Model.MapNLocations {
     public class GenericMap : INotifyPropertyChanged{
 
         private static char[,] _genericMapBoard;
-
+        private char _playerPosition;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public static char[,] GenericMapBoard { get { return _genericMapBoard; } set { _genericMapBoard = value; } }
-        public GenericMap(char[,] genericMapBoard) {
+        public char PlayerPosition { get { return _playerPosition; } set { _playerPosition = value; } }
+        public GenericMap(char[,] genericMapBoard, char playerPosition) {
             GenericMapBoard = genericMapBoard;
-
+            PlayerPosition = playerPosition;
         }
 
-        public static string BindingMapString() {
+        public static string BindingMapString(int x, int y) {
             string result = "";
             string bindString = "";
+            char[,] map = new char[x,y];
+            map = GenericMapBoard;
             for (int gameBoardHeight = 0; gameBoardHeight <= 9; gameBoardHeight++) {
                 for (int gameBoardLength = 0; gameBoardLength <= 9; gameBoardLength++) {
                     result = result + "     " + GenericMapBoard[gameBoardHeight, gameBoardLength];
