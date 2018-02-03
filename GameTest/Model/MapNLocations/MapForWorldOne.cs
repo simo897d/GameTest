@@ -36,9 +36,10 @@ namespace GameTest.Model.MapNLocations {
         }
         public static char initialPosition;
         public static MapForWorldOne StartingZone() {
-
+            char[,] mapCharArr = new char[10, 10];
+            mapCharArr = WorldOne;
             WorldOne[5, 5] = initialPosition;
-            MapForWorldOne map = new MapForWorldOne(WorldOne, initialPosition);
+            MapForWorldOne map = new MapForWorldOne(mapCharArr, initialPosition);
             return map;
         }
     }

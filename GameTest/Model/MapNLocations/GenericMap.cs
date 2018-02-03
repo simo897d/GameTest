@@ -19,9 +19,11 @@ namespace GameTest.Model.MapNLocations {
             PlayerPosition = playerPosition;
         }
 
-        public static string BindingMapString() {
+        public static string BindingMapString(int x, int y) {
             string result = "";
             string bindString = "";
+            char[,] map = new char[x,y];
+            map = GenericMapBoard;
             for (int gameBoardHeight = 0; gameBoardHeight <= 9; gameBoardHeight++) {
                 for (int gameBoardLength = 0; gameBoardLength <= 9; gameBoardLength++) {
                     result = result + "     " + GenericMapBoard[gameBoardHeight, gameBoardLength];

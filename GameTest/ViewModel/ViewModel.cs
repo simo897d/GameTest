@@ -39,8 +39,8 @@ namespace GameTest.ViewModelNS {
         public string MapBindingStart { get { return _mapBindingStart; } set { _mapBindingStart = value; } }
         public MapForWorldOne StartingZone() {
             _mapForWorldOne = MapForWorldOne.StartingZone();
-            MapForWorldOne.BindingMapString();
-            MapBindingStart = MapForWorldOne.BindingMapString();
+            MapForWorldOne.BindingMapString(9, 9);
+            MapBindingStart = MapForWorldOne.BindingMapString(9, 9);
             return _mapForWorldOne;
         }
         public ObservableCollection<InventoryItem> ListOfIventory {
