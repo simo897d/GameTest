@@ -11,6 +11,7 @@
         <Label x:Name="lbl_HitPointsHealth" Content="{Binding CurrentPlayer.CurrentHitPoints, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,10,0,0"/>
 
         <DataGrid x:Name="dgv_Inventory" ItemsSource="{Binding CurrentPlayer.ListOfInventory}" HorizontalAlignment="Left" Height="332" VerticalAlignment="Top" Width="152" Margin="630,10,0,0"/>
+        <TextBox x:Name="tb_Map" HorizontalAlignment="Left" Height="182" TextWrapping="Wrap" Text="{Binding MapBindingStart, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="270" Margin="202,138,0,0" IsReadOnly="True"/>
 
     </Grid>
 </Window>

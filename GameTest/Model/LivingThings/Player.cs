@@ -13,17 +13,23 @@ namespace GameTest.Model {
         private Weapons _weapon;
         public Weapons CurrentWeapon { get { return _weapon; } set { _weapon = value; } }
         public ObservableCollection<InventoryItem> ListOfInventory { get; set; }
-        
+
         public Player(int currentHitPoints, int maxHitPoints, string creatureName, Weapons equippedWep) : base(currentHitPoints, maxHitPoints, creatureName) {
             ListOfInventory = new ObservableCollection<InventoryItem>();
             CurrentWeapon = equippedWep;
-            }
+        }
+        public static Player DefaultPlayer() {
+            Player defPlayer = new Player(100, 100, "PlayerName", Swords.WoodenSword()); //Replace playername with string to set Playername
+
+            defPlayer.ListOfInventory.Add(Swords.WoodenSword());
+            return defPlayer;
+        }
 
 
         public void TakeDamage() {
-            CurrentHitPoints = CurrentHitPoints - 5;
+            //Lose HP
         }
-        public int DoDamage() {
+        public int DoDamageRoll() {
             int min;
             int max;
 
@@ -36,12 +42,6 @@ namespace GameTest.Model {
         }
         public void StartWep() {
             CurrentWeapon = Swords.WoodenSword();
-        }
-        public static Player DefaultPlayer() {
-            Player defPlayer = new Player(100, 100, "PlayerName", Swords.WoodenSword()); //Replace playername with string to set Playername
-            
-            defPlayer.ListOfInventory.Add(Swords.WoodenSword());
-            return  defPlayer;
         }
     }
 }

@@ -12,15 +12,15 @@ namespace GameTest.Model
         private int _currentHitPoints;
         private string _creatureName;
 
-        public string CreatureName { get { return _creatureName; } set { _creatureName = value; } }
+        public int MaxHitPoints { get; set; }
+        public bool IsDead { get { return CurrentHitPoints <= 0; } }
         public int CurrentHitPoints { get { return _currentHitPoints; }
             set { _currentHitPoints = value;
                 OnPropertyChanged("CurrentHitPoints");
             }
         }
 
-        public int MaxHitPoints { get; set; }
-        public bool IsDead { get { return CurrentHitPoints <= 0; } }
+        public string CreatureName { get { return _creatureName; } set { _creatureName = value; } }
 
         public LivingCreatures(int currentHitPoints, int maxHitPoints, string creatureName) {
             CurrentHitPoints = currentHitPoints;

@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace GameTest.Model.MapNLocations {
     public class MapForWorldOne : GenericMap{
-        ////public MapForWorldOne(char[,] genericMap) : base(genericMap) {
-
-        ////}
         public static char[,] WorldOne = new char[10, 10] {
                 {'X','X','X','X','X','X','X','X','X','X'},
                 {'X','X','X','X','X','X','X','X','X','X'},
@@ -22,7 +19,7 @@ namespace GameTest.Model.MapNLocations {
                 {'X','X','X','X','X','X','X','X','X','X'},
             }; 
 
-        public MapForWorldOne(char[,] genericMapBoard, string bindString) : base(genericMapBoard){
+        public MapForWorldOne(char[,] genericMapBoard) : base(genericMapBoard){
 
         }
         public static string bindString;
@@ -40,7 +37,7 @@ namespace GameTest.Model.MapNLocations {
         public static MapForWorldOne StartingZone() {
             
 
-            MapForWorldOne map = new MapForWorldOne(WorldOne, bindString);
+            MapForWorldOne map = new MapForWorldOne(WorldOne);
             return map;
         }
     }
