@@ -31,7 +31,7 @@ namespace GameTest.ViewModelNS {
             }
         }
         public GenericMap CurrentZone() {
-            if(CurrentZoneProp == null) {
+            if (CurrentZoneProp == null) {
                 StartingZone();
             } else { return CurrentZoneProp; }
             return CurrentZoneProp;
@@ -64,7 +64,6 @@ namespace GameTest.ViewModelNS {
             return output;
         }
         public void MovePlayer() {
-
         }
 
 

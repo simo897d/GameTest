@@ -9,13 +9,14 @@ namespace GameTest.Model.MapNLocations {
     public class GenericMap : INotifyPropertyChanged{
 
         private static char[,] _genericMapBoard;
-
+        private char _playerPosition;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public static char[,] GenericMapBoard { get { return _genericMapBoard; } set { _genericMapBoard = value; } }
-        public GenericMap(char[,] genericMapBoard) {
+        public char PlayerPosition { get { return _playerPosition; } set { _playerPosition = value; } }
+        public GenericMap(char[,] genericMapBoard, char playerPosition) {
             GenericMapBoard = genericMapBoard;
-
+            PlayerPosition = playerPosition;
         }
 
         public static string BindingMapString() {

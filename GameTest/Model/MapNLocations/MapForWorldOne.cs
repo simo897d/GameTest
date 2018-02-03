@@ -19,7 +19,7 @@ namespace GameTest.Model.MapNLocations {
                 {'X','X','X','X','X','X','X','X','X','X'},
             }; 
 
-        public MapForWorldOne(char[,] genericMapBoard) : base(genericMapBoard){
+        public MapForWorldOne(char[,] genericMapBoard, char playerPosition) : base(genericMapBoard, playerPosition){
 
         }
         public static string bindString;
@@ -34,10 +34,11 @@ namespace GameTest.Model.MapNLocations {
             bindString = result;
             return result;
         }
+        public static char initialPosition;
         public static MapForWorldOne StartingZone() {
-            
 
-            MapForWorldOne map = new MapForWorldOne(WorldOne);
+            WorldOne[5, 5] = initialPosition;
+            MapForWorldOne map = new MapForWorldOne(WorldOne, initialPosition);
             return map;
         }
     }
